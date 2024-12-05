@@ -7,3 +7,24 @@ Challenge:
 
 Integrate a database (e.g., MongoDB) to store and retrieve data for displaying on web pages.
 Explore advanced templating features like loops, conditionals, and layouts for a more structured and dynamic user interface.
+
+
+HomePage Displaying Welcome Message
+```bash
+curl --location --request GET 'http://localhost:{PORT}/
+```
+
+Get Poduct Page
+```bash
+curl --location --request GET 'http://localhost:{PORT}/products
+```
+
+Insert New Poduct
+```bash
+curl --location --request POST 'http://localhost:{PORT}/products
+```
+
+Go To Login Page
+```bash
+curl --location --request GET 'http://localhost:{PORT}/login
+```
