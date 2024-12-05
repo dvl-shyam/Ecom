@@ -1,0 +1,7 @@
+{{define "content"}}
+<ul>
+    {{range .Products}}
+    <li>{{.name}} - ${{.price}}</li>
+    {{end}}
+</ul>
+{{end}}

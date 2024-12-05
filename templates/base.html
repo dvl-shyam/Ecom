@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+    <style>
+        body {
+            display: flex;
+            gap: 20px;
+        }
+        .left {
+            flex: 1;
+        }
+        .right {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main style="display: flex;">
+        <div class="left">
+            <h2>Product List</h2>
+            <ul>
+                {{range .Products}}
+                <li>{{.name}} - ${{.price}}</li>
+                {{end}}
+            </ul>
+        </div>
+
+        <div class="right">
+            <h2>Add Product</h2>
+            <form method="post" action="/products">
+                <label for="name">Product Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="price">Product Price:</label>
+                <input type="text" id="price" name="price" required><br>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
